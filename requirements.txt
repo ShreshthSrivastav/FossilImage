@@ -2,7 +2,6 @@ fastai
 streamlit
 numpy
 matplotlib
-time
 PIL
 requests
 pandas
