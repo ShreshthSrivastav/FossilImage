@@ -4,4 +4,4 @@ numpy
 matplotlib
 requests
 pandas
-pytorch
+torch
