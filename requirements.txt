@@ -4,6 +4,5 @@ numpy
 matplotlib
 requests
 pandas
-cudatoolkit==10.2
 torch===1.5.0
 torchvision===0.6.0
