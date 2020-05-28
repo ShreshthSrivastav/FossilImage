@@ -6,7 +6,9 @@ Make sure this folder contains these two files:
 Our versions of these two files can be downloaded here from .       
 
 **Releases**:     
-https://github.com/npatta01/web-deep-learning-classifier/releases  
+https://github.com/Shreshth1991/FossilImage/releases
 
-`wget https://github.com/npatta01/web-deep-learning-classifier/releases/download/v1.0.1/classes.txt`  
-`wget https://github.com/npatta01/web-deep-learning-classifier/releases/download/v1.0.1/model.pkl`
+`wget https://github.com/Shreshth1991/FossilImage/releases/download/v1.0.1/classes.txt`  
+`wget https://github.com/Shreshth1991/FossilImage/releases/download/v1.0.1/model.pkl`
+
+
