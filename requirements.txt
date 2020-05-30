@@ -147,8 +147,8 @@ pytesseract==0.3.3
 pytest-pylint==0.15.1
 python-dateutil==2.8.0
 python-jsonrpc-server==0.3.4
-pywin32==227
 python-language-server==0.31.9
+pywin32==227
 pywin32-ctypes==0.2.0
 pywinpty==0.5.5
 PyYAML==5.1
