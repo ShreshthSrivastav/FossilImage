@@ -78,12 +78,12 @@ if option == 'Choose a sample image':
 
 
     # Test image selection
-    test_images = os.listdir('test/')
+    test_images = os.listdir('model/data/test/')
     #test_images = os.listdir('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\')
     test_image = st.selectbox('Please select a test image:', test_images)
 
     # Read the image
-    file_path = 'test/' + test_image
+    file_path = 'model/data/test/' + test_image
     #file_path = 'C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\' + test_image
     img = open_image(file_path)
     # Get the image to display
