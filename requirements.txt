@@ -145,7 +145,6 @@ pyrsistent==0.14.11
 PySocks==1.6.8
 pytesseract==0.3.3
 pytest-pylint==0.15.1
-python-dateutil==2.8.0
 pywin32==227
 pywin32-ctypes==0.2.0
 pywinpty==0.5.5
