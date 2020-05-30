@@ -1,6 +1,5 @@
 absl-py==0.7.0
 alabaster==0.7.12
-pywin32==227
 altair==4.0.0
 argh==0.26.2
 asn1crypto==0.24.0
