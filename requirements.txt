@@ -17,7 +17,7 @@ backports.shutil-which==3.5.2
 base58==1.0.3
 bcrypt==3.1.7
 beautifulsoup4==4.9.1
-bleach==3.1.0
+bleach==3.1.4
 blinker==1.4
 blis==0.4.1
 boto3==1.10.45
