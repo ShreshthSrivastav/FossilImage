@@ -59,8 +59,8 @@ def predict_img(img_test):
     with st.spinner('Wait for it...Predicting...'):
         time.sleep(3)
 
-    #model = load_learner('Shreshth1991/FossilImage/releases/download/v1.0.1/')
-    model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
+    model = load_learner('Shreshth1991/FossilImage/releases/download/v1.0.1/')
+    #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
     model.predict(img_test)
     pred_class,pred_idx,outputs = model.predict(img_test)
     res =  zip(model.data.classes, outputs.tolist())
@@ -78,12 +78,12 @@ if option == 'Choose a sample image':
 
 
     # Test image selection
-    test_images = os.listdir('FossilImage/test/')
+    test_images = os.listdir('Shreshth1991/FossilImage/test/')
     #test_images = os.listdir('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\')
     test_image = st.selectbox('Please select a test image:', test_images)
 
     # Read the image
-    file_path = 'FossilImage/test/' + test_image
+    file_path = 'Shreshth1991/FossilImage/test/' + test_image
     #file_path = 'C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\' + test_image
     img = open_image(file_path)
     # Get the image to display
