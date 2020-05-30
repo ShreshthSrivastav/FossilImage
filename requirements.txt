@@ -91,10 +91,6 @@ lightgbm==2.3.1
 Markdown==3.0.1
 MarkupSafe==1.1.1
 matplotlib==3.0.3
-mccabe==0.6.1
-mkl-fft==1.0.15
-mkl-random==1.1.0
-mkl-service==2.3.0
 mock==2.0.0
 murmurhash==1.0.2
 nbconvert==5.4.1
