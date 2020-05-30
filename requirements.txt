@@ -1,5 +1,6 @@
 absl-py==0.7.0
 alabaster==0.7.12
+pywin32==227
 altair==4.0.0
 argh==0.26.2
 asn1crypto==0.24.0
@@ -145,7 +146,6 @@ pyrsistent==0.14.11
 PySocks==1.6.8
 pytesseract==0.3.3
 pytest-pylint==0.15.1
-pywin32==227
 pywin32-ctypes==0.2.0
 pywinpty==0.5.5
 PyYAML==5.1
