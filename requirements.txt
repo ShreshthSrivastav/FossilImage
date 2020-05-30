@@ -1,4 +1,4 @@
 streamlit
 fastai
-https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
-torchvision==0.3.0
+https://download.pytorch.org/whl/cpu/torch-1.2.0-cp36-cp36m-linux_x86_64.whl
+torchvision==0.4.0
