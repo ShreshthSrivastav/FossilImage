@@ -29,10 +29,6 @@ def display_image(url):
     img_disp = np.asarray(pil_img)
     return img_disp
 
-def load_model(path=".", model_name="model.pkl"):
-    learn = load_learner(path, fname=model_name)
-    return learn
-
 def predict(url):
     
     
@@ -47,10 +43,8 @@ def predict(url):
     #Fetch image from url
     img = fetch_image(url)
 
-    #model = load_learner('releases/download/v1.0.1/')
-    #model = load_learner('releases/download/v1.0.1/', fname='model.pkl')
-    model = load_model('https://drive.google.com/file/d/197w_Rp_rMc7Om2j8iDu4X_4zzsqGotLi/view?usp=sharing')
-    #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
+    model = load_learner('model/modelfile/')
+    #model = load_learner('model/modelfile/', fname='model.pkl')
     pred_class,pred_idx,outputs = model.predict(img)
     res =  zip(model.data.classes, outputs.tolist())
     predictions = sorted(res, key=lambda x:x[1], reverse=True)
@@ -65,9 +59,8 @@ def predict_img(img_test):
     with st.spinner('Wait for it...Predicting...'):
         time.sleep(3)
 
-    #model = load_learner('Shreshth1991/FossilImage/releases/download/v1.0.1/')
-    #model = load_learner('releases/download/v1.0.1/', fname='model.pkl')
-    model = load_model('https://github.com/Shreshth1991/FossilImage/releases/download/v1.0.1/')
+    model = load_learner('model/modelfile/')
+    #model = load_learner('model/modelfile/', fname='model.pkl')
     #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
     model.predict(img_test)
     pred_class,pred_idx,outputs = model.predict(img_test)
