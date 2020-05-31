@@ -29,9 +29,7 @@ def display_image(url):
     img_disp = np.asarray(pil_img)
     return img_disp
 
-def predict(url):
-    
-    
+def predict(url):    
     # Display the test image
     img_dispp = display_image(url)
     st.image(img_dispp, width=500)
@@ -62,7 +60,6 @@ def predict_img(img_test):
     #model = load_learner('model/modelfile/')
     model = load_learner('model/modelfile/', 'model.pkl')
     #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
-    model.predict(img_test)
     pred_class,pred_idx,outputs = model.predict(img_test)
     res =  zip(model.data.classes, outputs.tolist())
     predictions = sorted(res, key=lambda x:x[1], reverse=True)
