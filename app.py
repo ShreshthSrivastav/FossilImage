@@ -49,7 +49,7 @@ def predict(url):
 
     #model = load_learner('releases/download/v1.0.1/')
     #model = load_learner('releases/download/v1.0.1/', fname='model.pkl')
-    model = load_model('models')
+    model = load_model('model')
     #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
     pred_class,pred_idx,outputs = model.predict(img)
     res =  zip(model.data.classes, outputs.tolist())
@@ -67,7 +67,7 @@ def predict_img(img_test):
 
     #model = load_learner('Shreshth1991/FossilImage/releases/download/v1.0.1/')
     #model = load_learner('releases/download/v1.0.1/', fname='model.pkl')
-    model = load_model('models')
+    model = load_model('model')
     #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
     model.predict(img_test)
     pred_class,pred_idx,outputs = model.predict(img_test)
@@ -86,12 +86,12 @@ if option == 'Choose a sample image':
 
 
     # Test image selection
-    test_images = os.listdir('model/data/test/')
+    test_images = os.listdir('data/test/')
     #test_images = os.listdir('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\')
     test_image = st.selectbox('Please select a test image:', test_images)
 
     # Read the image
-    file_path = 'model/data/test/' + test_image
+    file_path = 'data/test/' + test_image
     #file_path = 'C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\' + test_image
     img = open_image(file_path)
     # Get the image to display
