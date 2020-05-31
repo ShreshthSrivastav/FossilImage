@@ -49,7 +49,7 @@ def predict(url):
 
     #model = load_learner('releases/download/v1.0.1/')
     #model = load_learner('releases/download/v1.0.1/', fname='model.pkl')
-    model = load_model('model')
+    model = load_model('https://github.com/Shreshth1991/FossilImage/releases/download/v1.0.1/')
     #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
     pred_class,pred_idx,outputs = model.predict(img)
     res =  zip(model.data.classes, outputs.tolist())
@@ -67,7 +67,7 @@ def predict_img(img_test):
 
     #model = load_learner('Shreshth1991/FossilImage/releases/download/v1.0.1/')
     #model = load_learner('releases/download/v1.0.1/', fname='model.pkl')
-    model = load_model('model')
+    model = load_model('https://github.com/Shreshth1991/FossilImage/releases/download/v1.0.1/')
     #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
     model.predict(img_test)
     pred_class,pred_idx,outputs = model.predict(img_test)
