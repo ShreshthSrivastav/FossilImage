@@ -24,17 +24,6 @@ st.title("Fossil Image Classifier")
 st.title("Upload your own image")
 # file = st.file_uploader("Please choose a file")
 
-# menu = ["Image","Dataset","DocumentFiles","About"]
-# choice = st.sidebar.selectbox("Menu",menu)
-
-# if choice == "Image":
-#   st.subheader("Image")
-
-# elif choice == "Dataset":
-#   st.subheader("Dataset")
-
-# elif choice == "DocumentFiles":
-#   st.subheader("DocumentFiles")
   
 def predict_img(img_test):
     # Temporarily displays a message while executing 
@@ -61,10 +50,10 @@ image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
 
 if image_file is not None:
   # To See details
-  file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
+#   file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
 #   st.write(file_details)
   
-  predict_img(load_image(image_file))
+  predict_img(image_file)
 
 # To View Uploaded Image
   st.image(load_image(image_file),width=250)
