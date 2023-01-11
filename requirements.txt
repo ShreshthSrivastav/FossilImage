@@ -1,4 +1,4 @@
 streamlit
-fastai
+fastai==1.0.57
 torchvision
 torch
