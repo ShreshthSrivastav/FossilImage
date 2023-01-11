@@ -38,11 +38,10 @@ st.title("Upload your own image")
   
 
 def load_image(image_file):
-	img = Image.open(image_file)
-	return img
+     img = Image.open(image_file)
+     return img
 
-if choice == "Image":
-  st.subheader("Image")
+
 image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
 
 if image_file is not None:
@@ -52,11 +51,6 @@ if image_file is not None:
 
 # To View Uploaded Image
   st.image(load_image(image_file),width=250)
-
-
-
-
-
 
 def fetch_image(url):
     response = requests.get(url)
