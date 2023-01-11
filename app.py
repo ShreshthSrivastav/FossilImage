@@ -50,8 +50,6 @@ def load_image(image_file):
 image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg","webp"])
 
 if image_file is not None:
-  bytes_data = image_file.getvalue()
-  st.write(bytes_data)
   st.image(image_file,width=250)
   
 #   file_bytes = np.asarray(bytearray(image_file.read()), dtype=np.uint8)
