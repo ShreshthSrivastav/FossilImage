@@ -2,8 +2,8 @@
 # coding: utf-8
 
 from torch.jit.annotations import Optional
-#from fastai.vision import open_image, load_learner, image, torch
 from fastai.vision.all import *
+from fastai.vision import open_image, load_learner, image, torch
 import streamlit as st
 import numpy as np
 import matplotlib.image as mpimg
