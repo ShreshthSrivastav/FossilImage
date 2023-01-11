@@ -15,7 +15,7 @@ import requests
 from io import BytesIO
 import pprint
 import pandas as pd
-import cv2 as cv
+import cv2
 #fetch the image from the URL
 
 # App title
