@@ -60,7 +60,7 @@ if image_file is not None:
 #   file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
 #   st.write(file_details)
   
-  predict_img(load_image(image_file))
+  predict_img(image_file)
 
 # To View Uploaded Image
 #   st.image(load_image(image_file),width=250)
