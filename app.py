@@ -22,8 +22,8 @@ st.title("Fossil classifier")
 
 def fetch_image(url):
     response = requests.get(url)
-    #img = open_image(BytesIO(response.content))
-    img = PIL.Image.open(BytesIO(response.content)) 
+    img = open_image(BytesIO(response.content))
+    #img = PIL.Image.open(BytesIO(response.content)) 
     return img
 
 def display_image(url):
@@ -86,8 +86,8 @@ if option == 'Choose a sample image':
     # Read the image
     file_path = 'data/test/' + test_image
     #file_path = 'C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\' + test_image
-    #img = open_image(file_path)
-    img = PIL.Image.open(file_path)
+    img = open_image(file_path)
+    #img = PIL.Image.open(file_path)
     # Get the image to display
     display_img = mpimg.imread(file_path)
 
