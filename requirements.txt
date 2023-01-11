@@ -1,4 +1,4 @@
 streamlit
 fastai
 torchvision
-pytorch
+torch
