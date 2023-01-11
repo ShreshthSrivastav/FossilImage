@@ -15,6 +15,7 @@ import requests
 from io import BytesIO
 import pprint
 import pandas as pd
+import cv2 as cv
 #fetch the image from the URL
 
 # App title
@@ -46,10 +47,14 @@ def load_image(image_file):
      return img
 
 
-image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
+image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg","webp"])
 
 if image_file is not None:
-  # To See details
+  file_bytes = np.asarray(bytearray(image_file.read()), dtype=np.uint8)
+  img2 = cv2.imdecode(file_bytes, 1)
+  st.image(img2,width=250)
+  
+
 #   file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
 #   st.write(file_details)
   
