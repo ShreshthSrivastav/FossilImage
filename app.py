@@ -21,10 +21,8 @@ import pandas as pd
 st.title("Fossil Image Classifier")
 
 # adding a file uploader
+st.title("Upload your own image")
 file = st.file_uploader("Please choose a file")
-
-# def main():
-st.title("File Upload Tutorial")
 
 menu = ["Image","Dataset","DocumentFiles","About"]
 choice = st.sidebar.selectbox("Menu",menu)
