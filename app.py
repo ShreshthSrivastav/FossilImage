@@ -47,7 +47,9 @@ image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
 if image_file is not None:
   # To See details
   file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
-  st.write(file_details)
+#   st.write(file_details)
+  
+  predict_img(load_image(image_file))
 
 # To View Uploaded Image
   st.image(load_image(image_file),width=250)
