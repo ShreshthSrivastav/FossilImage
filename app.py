@@ -3,6 +3,7 @@
 
 from torch.jit.annotations import Optional
 from fastai.vision.all import *
+import PIL
 # from fastai.vision.all import open_image, load_learner, image, torch
 import streamlit as st
 import numpy as np
@@ -21,7 +22,8 @@ st.title("Fossil classifier")
 
 def fetch_image(url):
     response = requests.get(url)
-    img = open_image(BytesIO(response.content))
+    #img = open_image(BytesIO(response.content))
+    img = PIL.Image.open(BytesIO(response.content)) 
     return img
 
 def display_image(url):
