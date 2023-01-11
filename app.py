@@ -36,7 +36,22 @@ st.title("Upload your own image")
 # elif choice == "DocumentFiles":
 #   st.subheader("DocumentFiles")
   
+def predict_img(img_test):
+    # Temporarily displays a message while executing 
+    with st.spinner('Wait for it...Predicting...'):
+        time.sleep(3)
 
+    #model = load_learner('model/modelfile/')
+    model = load_learner('model/modelfile/', 'model.pkl')
+    #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
+    pred_class,pred_idx,outputs = model.predict(img_test)
+    res =  zip(model.data.classes, outputs.tolist())
+    predictions = sorted(res, key=lambda x:x[1], reverse=True)
+    top_predictions = predictions[0:5]
+    df = pd.DataFrame(top_predictions, columns =["Fossil","Probability"])
+    df['Probability'] = df['Probability']*100
+    st.write(df)
+    
 def load_image(image_file):
      img = Image.open(image_file)
      return img
