@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.image as mpimg
 import os
 import time
-import PIL.Image
+import PIL.Image as Image
 import requests
 from io import BytesIO
 import pprint
@@ -19,6 +19,9 @@ import pandas as pd
 
 # App title
 st.title("Fossil Image Classifier")
+
+# adding a file uploader
+file = st.file_uploader("Please choose a file")
 
 # def main():
 st.title("File Upload Tutorial")
