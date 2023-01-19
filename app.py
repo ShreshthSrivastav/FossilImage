@@ -21,49 +21,12 @@ import pandas as pd
 # App title
 st.title("Fossil Image Classifier")
 
-# adding a file uploader
-st.title("Upload your own image")
-# file = st.file_uploader("Please choose a file")
-
-  
-def predict_img(img_test):
-    # Temporarily displays a message while executing 
-    with st.spinner('Wait for it...Predicting...'):
-        time.sleep(3)
-
-    #model = load_learner('model/modelfile/')
-    model = load_learner('model/modelfile/', 'model.pkl')
-    pred_class,pred_idx,outputs = model.predict(img_test)
-    res =  zip(model.data.classes, outputs.tolist())
-    predictions = sorted(res, key=lambda x:x[1], reverse=True)
-    top_predictions = predictions[0:5]
-    df = pd.DataFrame(top_predictions, columns =["Fossil","Probability"])
-    df['Probability'] = df['Probability']*100
-    st.write(df)
-    
-def load_image(image_file):
-     img = Image.open(image_file)
-     return img
+ 
+# def load_image(image_file):
+#      img = Image.open(image_file)
+#      return img
 
 
-image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg","webp"])
-
-if image_file is not None:
-  st.image(image_file,width=250)
-  
-#   file_bytes = np.asarray(bytearray(image_file.read()), dtype=np.uint8)
-#   img2 = cv2.imdecode(file_bytes, 1)
-#   st.image(img2,width=250)
-  
-
-#   file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
-#   st.write(file_details)
-  img2 = load_image(image_file)
-  
-  predict_img(img2)
-
-# To View Uploaded Image
-#   st.image(load_image(image_file),width=250)
 
 def fetch_image(url):
     response = requests.get(url)
