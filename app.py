@@ -21,13 +21,6 @@ import pandas as pd
 # App title
 st.title("Fossil Image Classifier")
 
- 
-# def load_image(image_file):
-#      img = Image.open(image_file)
-#      return img
-
-
-
 def fetch_image(url):
     response = requests.get(url)
     img = open_image(BytesIO(response.content))
@@ -79,7 +72,6 @@ def predict_img(img_test):
     st.write(df)
 
 # Image source selection
-#option = st.radio('', ['Choose a test image', 'Choose your own image'])
 option = st.radio('', ['Choose a sample image','Choose your own image'])
 
 if option == 'Choose a sample image':
