@@ -33,7 +33,6 @@ def predict_img(img_test):
 
     #model = load_learner('model/modelfile/')
     model = load_learner('model/modelfile/', 'model.pkl')
-    #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
     pred_class,pred_idx,outputs = model.predict(img_test)
     res =  zip(model.data.classes, outputs.tolist())
     predictions = sorted(res, key=lambda x:x[1], reverse=True)
@@ -108,7 +107,6 @@ def predict_img(img_test):
 
     #model = load_learner('model/modelfile/')
     model = load_learner('model/modelfile/', 'model.pkl')
-    #model = load_learner('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\models','model.pkl')
     pred_class,pred_idx,outputs = model.predict(img_test)
     res =  zip(model.data.classes, outputs.tolist())
     predictions = sorted(res, key=lambda x:x[1], reverse=True)
@@ -126,12 +124,11 @@ if option == 'Choose a sample image':
 
     # Test image selection
     test_images = os.listdir('data/test/')
-    #test_images = os.listdir('C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\')
+    
     test_image = st.selectbox('Please select a test image:', test_images)
 
     # Read the image
     file_path = 'data/test/' + test_image
-    #file_path = 'C:\\Users\\H231148\\OneDrive - Halliburton\\Desktop\\test\\' + test_image
     img = open_image(file_path)
     #img = PIL.Image.open(file_path)
     # Get the image to display
@@ -152,5 +149,5 @@ elif option == 'Choose your own image':
             #Predict and display the image
             predict(url)
         except:
-            st.text("Invalid url!...Try some other url (eg: https://upload.wikimedia.org/wikipedia/commons/5/5c/Ammoniteplit.jpg)")
+            st.text("Invalid url!...Try some other url (eg: https://www.fossilera.com/sp/317757/ammonite-fossils/stephanoceras-sp.jpg)")
 
