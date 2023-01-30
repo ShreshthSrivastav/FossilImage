@@ -34,7 +34,7 @@ def display_image(url):
     return img_disp
 
 def predict(url):    
-    # Display the test image
+    # Display the test images
     img_dispp = display_image(url)
     st.image(img_dispp, width=500)
             
