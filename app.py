@@ -19,7 +19,7 @@ import pandas as pd
 #fetch the image from the URL
 
 # App title
-st.title("Fossil Image Classifier")
+st.title("Fossil Image AI Classifier")
 
 def fetch_image(url):
     response = requests.get(url)
