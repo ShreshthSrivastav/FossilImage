@@ -9,7 +9,6 @@
     - Streamlit - UI/UX
 - Value: By automating the identification process, the tool saves valuable time for paleontologists and eliminates the need for manual analysis.
 
-- 
 Classifies 5 types of fossil:
 - Ammonite
 - Trilobite
