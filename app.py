@@ -18,6 +18,11 @@ import pprint
 import pandas as pd
 # import cv2
 #fetch the image from the URL
+import functools
+import torch.serialization
+
+# Allow functools.partial as a global
+torch.serialization.add_safe_globals([functools.partial])
 
 # App title
 st.title("Fossil Image AI Classifier")
