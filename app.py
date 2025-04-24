@@ -46,7 +46,7 @@ def predict(url):
     img = fetch_image(url)
 
     #model = load_learner('model/modelfile/')
-    model = load_learner('model/modelfile/', 'model.pkl')
+    model = load_learner('model/modelfile/', 'model.pkl', device='cpu')
     pred_class,pred_idx,outputs = model.predict(img)
     res =  zip(model.data.classes, outputs.tolist())
     predictions = sorted(res, key=lambda x:x[1], reverse=True)
