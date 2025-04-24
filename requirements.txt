@@ -1,5 +1,5 @@
 streamlit
-torch==1.2.0
+torch==2.7.0
 torchvision==0.4.0
 fastai==1.0.57
 opencv-python==4.7.0.68
