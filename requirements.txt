@@ -1,4 +1,5 @@
 streamlit
 fastai==1.0.57
 opencv-python==4.7.0.68
-torch
+torch==1.2.0 torchvision==0.4.0 \
+    -f https://download.pytorch.org/whl/torch_stable.html
