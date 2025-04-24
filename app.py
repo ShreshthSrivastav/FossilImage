@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from torch.jit.annotations import Optional
+#from torch.jit.annotations import Optional
+from typing import Optional 
 # from fastai.vision.all import *
 import PIL
 from fastai.vision import open_image, load_learner, image, torch
